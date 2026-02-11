@@ -4,7 +4,6 @@ import useCountdown from '../hooks/useCountdown'
 import CountdownTimer from '../components/CountdownTimer'
 import { AsciiFlower } from '../components/CountdownTimer'
 import GiftReveal from '../components/GiftReveal'
-import CardGallery from '../components/CardGallery'
 import GenerateMessage from '../components/GenerateMessage'
 import EasterEgg from '../components/EasterEgg'
 
@@ -70,23 +69,6 @@ export default function Landing() {
         <div className="h-px w-12 sm:w-20 bg-rose-deep/40"></div>
         <AsciiFlower size="sm" />
         <div className="h-px w-12 sm:w-20 bg-rose-deep/40"></div>
-      </div>
-
-      {/* Cards */}
-      <motion.div
-        id="love-cards"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.8, duration: 0.6 }}
-        className="w-full max-w-5xl"
-      >
-        <CardGallery />
-      </motion.div>
-
-      {/* Flower divider */}
-      <div className="flex items-center justify-center gap-2 my-8 sm:my-12 opacity-30">
-        <AsciiFlower size="sm" />
-        <AsciiFlower size="sm" className="hidden sm:block" />
       </div>
 
       {/* Generate New Message */}
