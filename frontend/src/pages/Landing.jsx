@@ -2,7 +2,10 @@ import { useSearchParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import useCountdown from '../hooks/useCountdown'
 import CountdownTimer from '../components/CountdownTimer'
+import { AsciiFlower } from '../components/CountdownTimer'
 import GiftReveal from '../components/GiftReveal'
+import CardGallery from '../components/CardGallery'
+import GenerateMessage from '../components/GenerateMessage'
 import EasterEgg from '../components/EasterEgg'
 
 export default function Landing() {
@@ -11,8 +14,15 @@ export default function Landing() {
   const { days, hours, minutes, seconds, isExpired } = useCountdown(debugReveal)
 
   return (
-    <div className="min-h-[100dvh] flex flex-col items-center justify-center px-3 sm:px-4 py-6 sm:py-8 relative z-10">
+    <div className="min-h-[100dvh] flex flex-col items-center px-3 sm:px-4 py-6 sm:py-8 relative z-10">
       <EasterEgg />
+
+      {/* Decorative flowers top */}
+      <div className="flex items-center justify-center gap-4 sm:gap-8 mb-4 opacity-40">
+        <AsciiFlower size="sm" className="hidden min-[400px]:block" />
+        <AsciiFlower size="md" />
+        <AsciiFlower size="sm" className="hidden min-[400px]:block" />
+      </div>
 
       {/* Title */}
       <motion.div
@@ -55,17 +65,56 @@ export default function Landing() {
         <GiftReveal isRevealed={isExpired} />
       </motion.div>
 
-      {/* Footer hint */}
-      {!isExpired && (
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
-          className="mt-8 sm:mt-12 text-wine/30 font-body text-xs sm:text-sm text-center"
-        >
-          Something special is coming...
-        </motion.p>
-      )}
+      {/* Flower divider */}
+      <div className="flex items-center justify-center gap-2 my-8 sm:my-12 opacity-30">
+        <div className="h-px w-12 sm:w-20 bg-rose-deep/40"></div>
+        <AsciiFlower size="sm" />
+        <div className="h-px w-12 sm:w-20 bg-rose-deep/40"></div>
+      </div>
+
+      {/* Cards */}
+      <motion.div
+        id="love-cards"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.8, duration: 0.6 }}
+        className="w-full max-w-5xl"
+      >
+        <CardGallery />
+      </motion.div>
+
+      {/* Flower divider */}
+      <div className="flex items-center justify-center gap-2 my-8 sm:my-12 opacity-30">
+        <AsciiFlower size="sm" />
+        <AsciiFlower size="sm" className="hidden sm:block" />
+      </div>
+
+      {/* Generate New Message */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="w-full max-w-md mb-12"
+      >
+        <h2 className="font-display text-2xl text-wine text-center mb-6">
+          Want Another Love Message?
+        </h2>
+        <GenerateMessage />
+      </motion.div>
+
+      {/* Bottom flower garden */}
+      <div className="flex items-center justify-center gap-1 sm:gap-4 opacity-25 flex-wrap">
+        <AsciiFlower size="sm" />
+        <AsciiFlower size="md" className="hidden sm:block" />
+        <AsciiFlower size="sm" />
+        <AsciiFlower size="md" className="hidden sm:block" />
+        <AsciiFlower size="sm" />
+      </div>
+
+      {/* Footer */}
+      <div className="text-center py-8 text-wine/30 font-body text-xs">
+        Made with love, just for you
+      </div>
     </div>
   )
 }

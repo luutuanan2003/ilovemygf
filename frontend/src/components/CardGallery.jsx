@@ -1,23 +1,12 @@
-import { useMemo } from 'react'
 import { motion } from 'framer-motion'
-import { useSearchParams } from 'react-router-dom'
 import FlipCard from './FlipCard'
 import personalData from '../data/personal-messages.json'
 
 export default function CardGallery() {
-  const [searchParams] = useSearchParams()
-  const debugReveal = searchParams.get('reveal') === 'true'
-
   const cards = personalData.cards
 
-  const isCardUnlocked = (unlockDate) => {
-    if (debugReveal) return true
-    const today = new Date()
-    today.setHours(0, 0, 0, 0)
-    const unlock = new Date(unlockDate)
-    unlock.setHours(0, 0, 0, 0)
-    return today >= unlock
-  }
+  // All cards are now unlocked — no more daily gating
+  const isCardUnlocked = () => true
 
   const containerVariants = {
     hidden: { opacity: 0 },

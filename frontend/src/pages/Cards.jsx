@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
+import { AsciiFlower } from '../components/CountdownTimer'
 import CardGallery from '../components/CardGallery'
 import GenerateMessage from '../components/GenerateMessage'
-import LoveMeter from '../components/LoveMeter'
 import EasterEgg from '../components/EasterEgg'
 
 export default function Cards() {
@@ -11,6 +11,13 @@ export default function Cards() {
   return (
     <div className="min-h-screen relative z-10 px-4 py-8 max-w-5xl mx-auto">
       <EasterEgg />
+
+      {/* Decorative flowers top */}
+      <div className="flex items-center justify-center gap-4 sm:gap-8 mb-4 opacity-35">
+        <AsciiFlower size="sm" className="hidden min-[400px]:block" />
+        <AsciiFlower size="md" />
+        <AsciiFlower size="sm" className="hidden min-[400px]:block" />
+      </div>
 
       {/* Header */}
       <motion.div
@@ -27,12 +34,6 @@ export default function Cards() {
           </svg>
           Back
         </button>
-        <h1 className="font-display text-3xl sm:text-4xl text-wine font-bold mb-2">
-          Your Love Cards
-        </h1>
-        <p className="font-body text-wine/50 text-sm sm:text-base">
-          14 days of love - tap a card to reveal your message
-        </p>
       </motion.div>
 
       {/* Card Gallery */}
@@ -45,11 +46,11 @@ export default function Cards() {
         <CardGallery />
       </motion.section>
 
-      {/* Divider */}
-      <div className="flex items-center gap-4 mb-12">
-        <div className="flex-1 h-px bg-rose-soft/30"></div>
-        <span className="text-rose-soft text-2xl">&#x2665;</span>
-        <div className="flex-1 h-px bg-rose-soft/30"></div>
+      {/* Flower Divider */}
+      <div className="flex items-center justify-center gap-2 mb-12 opacity-30">
+        <div className="flex-1 h-px bg-rose-deep/40 max-w-20"></div>
+        <AsciiFlower size="sm" />
+        <div className="flex-1 h-px bg-rose-deep/40 max-w-20"></div>
       </div>
 
       {/* Generate New Message */}
@@ -65,22 +66,12 @@ export default function Cards() {
         <GenerateMessage />
       </motion.section>
 
-      {/* Divider */}
-      <div className="flex items-center gap-4 mb-12">
-        <div className="flex-1 h-px bg-rose-soft/30"></div>
-        <span className="text-rose-soft text-2xl">&#x2665;</span>
-        <div className="flex-1 h-px bg-rose-soft/30"></div>
+      {/* Bottom flower garden */}
+      <div className="flex items-center justify-center gap-1 sm:gap-4 opacity-25 flex-wrap mb-4">
+        <AsciiFlower size="sm" />
+        <AsciiFlower size="md" className="hidden sm:block" />
+        <AsciiFlower size="sm" />
       </div>
-
-      {/* Love Meter */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mb-16"
-      >
-        <LoveMeter />
-      </motion.section>
 
       {/* Footer */}
       <div className="text-center py-8 text-wine/30 font-body text-xs">

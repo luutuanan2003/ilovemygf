@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useNavigate } from 'react-router-dom'
 import { fireConfetti } from './Confetti'
 import personalData from '../data/personal-messages.json'
 
 export default function GiftReveal({ isRevealed }) {
-  const navigate = useNavigate()
   const [showMessage, setShowMessage] = useState(false)
   const [imageLoaded, setImageLoaded] = useState(false)
   const { gift_reveal } = personalData
@@ -87,7 +85,7 @@ export default function GiftReveal({ isRevealed }) {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => navigate('/cards')}
+              onClick={() => document.getElementById('love-cards')?.scrollIntoView({ behavior: 'smooth' })}
               className="px-8 py-3 bg-rose-deep text-white font-body font-semibold rounded-full shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
             >
               See Your Cards
