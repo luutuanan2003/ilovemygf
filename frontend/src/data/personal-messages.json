@@ -2,98 +2,98 @@
   "cards": [
     {
       "id": 1,
-      "unlock_date": "2025-02-01",
+      "unlock_date": "2026-02-01",
       "personal_message": "The first time I saw you, I knew my life was about to change. I just didn't know how much better it would get.",
       "category": "sweet",
       "emoji": "💕"
     },
     {
       "id": 2,
-      "unlock_date": "2025-02-02",
+      "unlock_date": "2026-02-02",
       "personal_message": "You're the only person who can make me laugh so hard I forget what I was stressed about. Thanks for being my favorite weirdo.",
       "category": "funny",
       "emoji": "😂"
     },
     {
       "id": 3,
-      "unlock_date": "2025-02-03",
+      "unlock_date": "2026-02-03",
       "personal_message": "Waking up and knowing you're mine is the best feeling in the world. I smile before I even open my eyes.",
       "category": "sweet",
       "emoji": "🥰"
     },
     {
       "id": 4,
-      "unlock_date": "2025-02-04",
+      "unlock_date": "2026-02-04",
       "personal_message": "Do you know how hard it is to focus on anything when you look that good? You're a beautiful distraction and I'm not complaining.",
       "category": "flirty",
       "emoji": "😏"
     },
     {
       "id": 5,
-      "unlock_date": "2025-02-05",
+      "unlock_date": "2026-02-05",
       "personal_message": "You taught me what it means to truly care about someone. Before you, I didn't know love could feel this safe and this exciting at the same time.",
       "category": "deep",
       "emoji": "✨"
     },
     {
       "id": 6,
-      "unlock_date": "2025-02-06",
+      "unlock_date": "2026-02-06",
       "personal_message": "Remember that time we couldn't stop laughing over literally nothing? That's my favorite kind of moment with you. Pure, ridiculous happiness.",
       "category": "funny",
       "emoji": "🤣"
     },
     {
       "id": 7,
-      "unlock_date": "2025-02-07",
+      "unlock_date": "2026-02-07",
       "personal_message": "I love the little things about you — the way you scrunch your nose, how excited you get about small things, and how warm your hand feels in mine.",
       "category": "sweet",
       "emoji": "💗"
     },
     {
       "id": 8,
-      "unlock_date": "2025-02-08",
+      "unlock_date": "2026-02-08",
       "personal_message": "If I could freeze one moment in time, it would be any moment where you're looking at me and smiling. That smile is my whole universe.",
       "category": "romantic",
       "emoji": "🌹"
     },
     {
       "id": 9,
-      "unlock_date": "2025-02-09",
+      "unlock_date": "2026-02-09",
       "personal_message": "You're the reason I check my phone with a stupid grin on my face. My friends are starting to notice and honestly I don't even care.",
       "category": "funny",
       "emoji": "😜"
     },
     {
       "id": 10,
-      "unlock_date": "2025-02-10",
+      "unlock_date": "2026-02-10",
       "personal_message": "In a world full of temporary things, you feel like forever. I want to build a life with you — every messy, beautiful, ordinary day of it.",
       "category": "deep",
       "emoji": "🌙"
     },
     {
       "id": 11,
-      "unlock_date": "2025-02-11",
+      "unlock_date": "2026-02-11",
       "personal_message": "You make even the most boring days feel special. Grocery shopping with you? An adventure. Doing nothing with you? The best plan ever.",
       "category": "sweet",
       "emoji": "🧸"
     },
     {
       "id": 12,
-      "unlock_date": "2025-02-12",
+      "unlock_date": "2026-02-12",
       "personal_message": "I can't promise I'll be perfect, but I can promise that no one will ever try harder to make you happy. You deserve the world and I want to give it to you.",
       "category": "flirty",
       "emoji": "🔥"
     },
     {
       "id": 13,
-      "unlock_date": "2025-02-13",
+      "unlock_date": "2026-02-13",
       "personal_message": "Tomorrow is Valentine's Day, but honestly every day with you feels like a celebration. I'm the luckiest person alive and I know it.",
       "category": "romantic",
       "emoji": "💌"
     },
     {
       "id": 14,
-      "unlock_date": "2025-02-14",
+      "unlock_date": "2026-02-14",
       "personal_message": "Happy Valentine's Day, baby! You are my best friend, my favorite person, and the love of my life. Today and always — I love you more than words will ever say.",
       "category": "special",
       "emoji": "❤️‍🔥",
@@ -101,7 +101,7 @@
     }
   ],
   "gift_reveal": {
-    "target_date": "2025-02-14T00:00:00",
+    "target_date": "2026-02-14T00:00:00",
     "image_path": "/images/Screenshot 2026-02-11 at 22.08.19.png",
     "reveal_message": "Happy Valentine's Day, baby! This is for you 🎁",
     "teaser_text": "A surprise awaits you... 💝"
