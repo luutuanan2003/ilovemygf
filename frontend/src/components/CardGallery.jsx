@@ -34,7 +34,7 @@ export default function CardGallery() {
       variants={containerVariants}
       initial="hidden"
       animate="show"
-      className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5"
+      className="grid grid-cols-1 min-[400px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 min-[400px]:gap-4 sm:gap-5"
     >
       {cards.map((card) => (
         <FlipCard

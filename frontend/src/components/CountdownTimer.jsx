@@ -3,9 +3,9 @@ import FlipDigit from './FlipDigit'
 
 function TimeUnit({ value, label }) {
   return (
-    <div className="flex flex-col items-center gap-2">
+    <div className="flex flex-col items-center gap-1 sm:gap-2">
       <FlipDigit value={value} />
-      <span className="text-xs sm:text-sm font-body text-wine/70 uppercase tracking-widest">
+      <span className="text-[10px] min-[400px]:text-xs sm:text-sm font-body text-wine/70 uppercase tracking-widest">
         {label}
       </span>
     </div>
@@ -14,11 +14,26 @@ function TimeUnit({ value, label }) {
 
 function Separator() {
   return (
-    <div className="flex flex-col items-center justify-center pb-6">
-      <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-gold animate-pulse-slow select-none">
+    <div className="flex flex-col items-center justify-center pb-5 sm:pb-6">
+      <span className="text-xl min-[400px]:text-2xl sm:text-3xl md:text-4xl font-bold text-gold animate-pulse-slow select-none">
         :
       </span>
     </div>
+  )
+}
+
+function AsciiRose() {
+  return (
+    <pre className="text-rose-deep/60 text-[8px] min-[400px]:text-[10px] sm:text-xs leading-tight select-none font-mono">
+{`    @@@
+  @@@@@@@
+ @@@@@@@@@
+  @@@@@@@
+    @@@
+     |
+    /|\\
+   / | \\`}
+    </pre>
   )
 }
 
@@ -29,12 +44,17 @@ export default function CountdownTimer({ days, hours, minutes, seconds, isExpire
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, type: "spring" }}
-        className="text-center"
+        className="text-center px-4"
       >
-        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-rose-deep mb-2">
+        <div className="flex items-center justify-center gap-4 mb-4">
+          <AsciiRose />
+          <AsciiRose />
+          <AsciiRose />
+        </div>
+        <h2 className="font-display text-2xl min-[400px]:text-3xl sm:text-4xl md:text-5xl text-rose-deep mb-2">
           Happy Valentine's Day!
         </h2>
-        <p className="text-wine/60 font-body text-lg">The wait is over...</p>
+        <p className="text-wine/60 font-body text-base sm:text-lg">The wait is over...</p>
       </motion.div>
     )
   }
@@ -44,15 +64,22 @@ export default function CountdownTimer({ days, hours, minutes, seconds, isExpire
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4"
+      className="flex flex-col items-center gap-4"
     >
-      <TimeUnit value={days} label="Days" />
-      <Separator />
-      <TimeUnit value={hours} label="Hours" />
-      <Separator />
-      <TimeUnit value={minutes} label="Minutes" />
-      <Separator />
-      <TimeUnit value={seconds} label="Seconds" />
+      <div className="flex items-center justify-center gap-3">
+        <AsciiRose />
+        <span className="text-rose-deep/40 font-display text-sm">for you</span>
+        <AsciiRose />
+      </div>
+      <div className="flex items-center justify-center gap-1 min-[400px]:gap-2 sm:gap-3 md:gap-4">
+        <TimeUnit value={days} label="Days" />
+        <Separator />
+        <TimeUnit value={hours} label="Hours" />
+        <Separator />
+        <TimeUnit value={minutes} label="Min" />
+        <Separator />
+        <TimeUnit value={seconds} label="Sec" />
+      </div>
     </motion.div>
   )
 }

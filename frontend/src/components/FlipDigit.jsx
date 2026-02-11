@@ -21,16 +21,14 @@ export default function FlipDigit({ value }) {
     }
   }, [value])
 
-  const digitStyle = "w-[44px] h-[68px] sm:w-[56px] sm:h-[80px] md:w-[64px] md:h-[92px] rounded-lg flex items-center justify-center font-display font-bold text-3xl sm:text-4xl md:text-5xl select-none"
+  const digitStyle = "w-[36px] h-[52px] min-[400px]:w-[44px] min-[400px]:h-[64px] sm:w-[56px] sm:h-[80px] md:w-[64px] md:h-[92px] rounded-lg flex items-center justify-center font-display font-bold text-2xl min-[400px]:text-3xl sm:text-4xl md:text-5xl select-none"
 
   return (
     <div className="flip-digit relative">
       <div className={`${digitStyle} bg-gradient-to-b from-charcoal to-charcoal/90 text-gold shadow-lg`}>
-        {/* Static current value (always shown as base layer) */}
         <span>{String(current).padStart(2, '0')}</span>
       </div>
 
-      {/* Flip animation overlay */}
       <AnimatePresence>
         {flipping && (
           <motion.div
