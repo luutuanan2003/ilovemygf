@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node:*)",
+      "Bash(npm:*)",
+      "Bash(java --version:*)",
+      "Bash(mvn:*)",
+      "Bash(/Users/andyl/Desktop/ilovemygf/frontend/public/images/gift.jpg << 'PLACEHOLDER'\nThis is a placeholder. Replace this file with your actual gift photo.\nPLACEHOLDER)",
+      "Bash(curl:*)",
+      "Bash(curl -s http://localhost:8080/)"
+    ]
+  }
+}

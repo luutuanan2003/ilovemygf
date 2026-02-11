@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-rose-deep: #BE123C;
+  --color-rose-soft: #FDA4AF;
+  --color-rose-blush: #FFF1F2;
+  --color-rose-light: #FFE4E6;
+  --color-gold: #D4A574;
+  --color-gold-dark: #B8860B;
+  --color-cream: #FFFBF5;
+  --color-charcoal: #1A1A2E;
+  --color-wine: #722F37;
+
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-slow: pulse-slow 3s ease-in-out infinite;
+  --animate-shimmer: shimmer 2s linear infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-charcoal);
+  background: linear-gradient(135deg, var(--color-rose-blush) 0%, var(--color-rose-light) 50%, var(--color-cream) 100%);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 3D card flip utilities */
+.perspective-1000 { perspective: 1000px; }
+.backface-hidden { backface-visibility: hidden; }
+.rotate-y-180 { transform: rotateY(180deg); }
+.preserve-3d { transform-style: preserve-3d; }
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-rose-blush);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-rose-soft);
+  border-radius: 3px;
+}
